@@ -18,7 +18,8 @@ def main():
         screen.fill((0, 0, 0))
         pygame.display.flip()
         pygame.time.Clock.tick(60)
-        dt = pygame.time.Clock().tick(60) / 1000
+        
+    dt = pygame.time.Clock().tick(60) / 1000
 
 
 
