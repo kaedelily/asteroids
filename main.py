@@ -6,7 +6,7 @@ import pygame
 import player 
 import asteroid
 import asteroidfield
-
+import sys
 
 def main():
     pygame.init()
@@ -34,6 +34,11 @@ def main():
             sprite.draw(screen)
         pygame.display.flip()
         updateable.update(dt)
+        for ast in asteroids:
+            collision = player1.collision(ast)
+            if collision == True:
+                print("Game over!")
+                sys.exit()
         tick = clock.tick(60)
         dt = tick / 1000.0
     
